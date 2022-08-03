@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/a", (req, res) => {
-  res.status(200).json({ message: "Hello world from Aa" });
+  res.status(200).json({ message: "Hello world from A" });
 });
 
 app.listen(5001, () => {
