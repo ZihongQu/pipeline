@@ -46,9 +46,7 @@ jobs:
         kubectl apply -f depl.yaml
     - name: Interact with the cluster
       run: kubectl get pods
-    - name: Test service URLs
+    - name: Interact with the cluster
       run: |
-        minikube service list
-        minikube service server-service --url
-        echo "------------------opening the service------------------"
-        curl $(minikube service server-service --url)    
+        kubectl get pods
+        kubectl get service   
