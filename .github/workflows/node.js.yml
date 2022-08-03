@@ -37,13 +37,13 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: 112358ann/api
+        tags: 112358ann/pipeline
     - name: start minikube
       id: minikube
       uses: medyagh/setup-minikube@master
     - name: Deploy to minikube
       run:
-        kubectl apply -f deploymentservice.yml
+        kubectl apply -f depl.yaml
     - name: Interact with the cluster
       run: kubectl get pods
     - name: Test service URLs
