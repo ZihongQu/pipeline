@@ -53,5 +53,3 @@ jobs:
       run: |
         kubectl get pods
         kubectl get service  
-        minikube service server-service
-        kubectl port-forward service/server-service 5001:5001
