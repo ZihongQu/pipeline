@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: 112358ann/pipeline:latest-amd64
+          image: 112358ann/pipeline:latest
           imagePullPolicy: "Always"
           ports:
             - containerPort: 5001
