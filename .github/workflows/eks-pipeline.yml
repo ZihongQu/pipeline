@@ -41,7 +41,7 @@ jobs:
         IMAGE_TAG: latest
       run: |
         docker build -t pipeline .
-        docker tag pipeline:latest 
+        docker tag pipeline:latest ${{ steps.login-ecr.outputs.registry }}/pipeline:latest
         docker push ${{ steps.login-ecr.outputs.registry }}/pipeline:latest
 
     - name: Update kube config
