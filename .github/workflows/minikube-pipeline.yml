@@ -49,4 +49,5 @@ jobs:
     - name: Interact with the cluster
       run: |
         kubectl get pods
-        kubectl get service   
+        kubectl get service  
+        kubectl port-forward service/server-service 8001:27017
