@@ -40,9 +40,9 @@ jobs:
         ECR_REPOSITORY: pipeline
         IMAGE_TAG: latest
       run: |
-        docker build -t pipeline .
-        docker tag pipeline:latest ${{ steps.login-ecr.outputs.registry }}/pipeline:latest
-        docker push ${{ steps.login-ecr.outputs.registry }}/pipeline:latest
+        docker buildx build --platform=linux/amd64 .
+        docker tag pipeline:latest ${{ steps.login-ecr.outputs.registry }}/pipeline:latest-amd64
+        docker push ${{ steps.login-ecr.outputs.registry }}/pipeline:latest-amd64
 
     - name: Update kube config
       run: aws eks update-kubeconfig --name eks --region ap-southeast-2
