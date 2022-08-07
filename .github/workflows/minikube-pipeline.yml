@@ -37,7 +37,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: 112358ann/pipeline
+        tags: 112358ann/demo:pipeline
     - name: start minikube
       id: minikube
       uses: medyagh/setup-minikube@master
