@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: 112358ann/pipeline
+    image: 112358ann/demo:argo
     container_name: myapp-node-app
     volumes:
       - ./:/usr/app
