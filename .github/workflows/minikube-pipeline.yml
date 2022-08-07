@@ -44,11 +44,13 @@ jobs:
     - name: Deploy to minikube
       run:
         kubectl apply -f depl-minikube.yaml
+    - name: Sleep for 10 seconds
+      run: sleep 10s
+      shell: bash
     - name: Interact with the cluster
       run: kubectl get pods
     - name: Interact with the cluster
       run: |
-        sleep(10)
         kubectl get pods
         kubectl get service  
         minikube service server-service
