@@ -43,7 +43,7 @@ jobs:
       uses: medyagh/setup-minikube@master
     - name: Deploy to minikube
       run:
-        kubectl apply -f depl.yaml
+        kubectl apply -f depl-minikube.yaml
     - name: Interact with the cluster
       run: kubectl get pods
     - name: Interact with the cluster
