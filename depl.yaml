@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: 354038856954.dkr.ecr.ap-southeast-2.amazonaws.com/pipeline
+          image: 354038856954.dkr.ecr.ap-southeast-2.amazonaws.com/pipeline:latest
           imagePullPolicy: "Always"
           ports:
             - containerPort: 5001
