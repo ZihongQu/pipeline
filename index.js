@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Hello worl" });
+  res.status(200).json({ message: "Hello world!!!!" });
 });
 
 app.listen(5001, () => {
